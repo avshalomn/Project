@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-class two2layer(tf.keras.layers.Layer):
+class layer2D(tf.keras.layers.Layer):
   def __init__(self,shape,units = None):
     super(two2layer,self).__init__()
     self.shape = shape
