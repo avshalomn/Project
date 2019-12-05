@@ -14,7 +14,7 @@ class layer2D(tf.keras.layers.Layer):
 ################################
 ##  double weights layer ##
 ################################    
-class complex_weights_layer(tf.keras.layers.Layer)
+class complex_weights_layer(tf.keras.layers.Layer):
   def __init__(self,shape,units=None):
     super(complex_weights_layer,self).__init__()
     self.shape = shape
