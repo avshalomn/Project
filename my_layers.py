@@ -32,6 +32,6 @@ class complex_weights_layer(tf.keras.layers.Layer)
       while cmath.polar(a + 1j*b)[0] >= 1:
         a = np.random.random()
         b = np.random.random()
-      return a +1jb
+      return a +1j*b
     W = np.array([[make_a_weight()for c in range(self.shape[1])] for r in range(self.shape[0])]
     return W
