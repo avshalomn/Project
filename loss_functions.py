@@ -36,14 +36,23 @@ def complex_loss_func(y_pred,y):
   
   diff = tf.abs(y_phase - pred_phase)
   
-  new_phase = 
-  
+   
   return loss
 
 ####################################################################
 
-@tf.function
 """
 NEW IDEA! is it possible to do better if a layer hold 2 setes of weights, a & b and within thc call() of the layer,
 and within the loss/training loop!
 """
+@tf.function
+def new_loss_func(y_pred,y):
+  """
+  y_pred: form of a +jb
+  y: form if a+jb
+  This is for the case where the layer has two different weights - a & b
+  """
+  return
+  
+  
+
