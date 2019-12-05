@@ -52,7 +52,18 @@ def new_loss_func(y_pred,y):
   y: form if a+jb
   This is for the case where the layer has two different weights - a & b
   """
-  return
+  main_diff = y_pred - y
+  
+  phase_diff = tf.math.atan2(
+    tf.math.imag(main_diff),
+    tf.math.real(main_diff)
+  )
+  
+  js = tf.constant([[1j for c in y_pred.shape[1]] for r in y_pred.shape[0]])
+  
+  phase_loss = phase_diff*js
+  
+  return phase_loss
   
   
 
